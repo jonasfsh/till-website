@@ -52,14 +52,14 @@ export default defineComponent({
     }
   },
   setup(props, { emit }) {
-    const { isDarkMode } = toRefs(props);
+    const { isDarkMode: darkMode } = toRefs(props);
 
     const toggleDarkMode = () => {
       emit('toggle-dark-mode');
     };
 
     return {
-      isDarkMode,
+      darkMode,
       faMoon,
       faSun,
       toggleDarkMode
