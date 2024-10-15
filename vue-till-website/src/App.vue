@@ -2,32 +2,39 @@
   <div id="app">
     <div :class="{ 'dark-mode': isDarkMode }">
       <Navbar :isDarkMode="isDarkMode" @toggle-dark-mode="toggleDarkMode" />
+      <About/>
       <router-view />
     </div>
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
+import { ref } from 'vue';
+import Navbar from '@/components/Navbar.vue';
+import About from '@/components/About.vue';
 
 export default {
   name: 'App',
   components: {
-    Navbar
+    Navbar,
+    About
   },
-  data() {
-    return {
-      isDarkMode: false
+  setup() {
+    const isDarkMode = ref(false);
+
+    const toggleDarkMode = () => {
+      isDarkMode.value = !isDarkMode.value;
+      document.body.classList.toggle('dark-mode', isDarkMode.value);
     };
-  },
-  methods: {
-    toggleDarkMode() {
-      this.isDarkMode = !this.isDarkMode;
-      document.body.classList.toggle('dark-mode', this.isDarkMode);
-    }
+
+    return {
+      isDarkMode,
+      toggleDarkMode
+    };
   }
 }
 </script>
+
 
 <style>
 body {
@@ -35,7 +42,6 @@ body {
   color: #ffffff;
 }
 
-/* Dark Mode Styles */
 body.dark-mode {
   background-color: #212529;
   color: #ffffff;

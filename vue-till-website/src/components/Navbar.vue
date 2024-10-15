@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent, toRefs } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
@@ -51,19 +51,23 @@ export default defineComponent({
       default: false
     }
   },
-  methods: {
-    toggleDarkMode() {
-      this.$emit('toggle-dark-mode');
-    }
-  },
-  setup() {
+  setup(props, { emit }) {
+    const { isDarkMode } = toRefs(props);
+
+    const toggleDarkMode = () => {
+      emit('toggle-dark-mode');
+    };
+
     return {
+      isDarkMode,
       faMoon,
-      faSun
+      faSun,
+      toggleDarkMode
     };
   }
 });
 </script>
+
 
 <style scoped>
 .navbar {
