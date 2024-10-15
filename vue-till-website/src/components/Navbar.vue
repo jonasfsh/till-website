@@ -1,6 +1,6 @@
 <template>
   <nav :class="['navbar', 'navbar-expand-lg', isDarkMode ? 'bg-dark' : 'bg-light']">
-    <a class="navbar-brand" :class="isDarkMode ? 'text-light' : 'text-dark'" href="#">TILL PULST</a>
+    <a class="navbar-brand" :class="isDarkMode ? 'text-light' : 'text-dark'" href="#">BÜRO PULST</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,6 +14,9 @@
         </li>
         <li class="nav-item">
           <router-link class="nav-link" :class="isDarkMode ? 'text-light' : 'text-dark'" to="/contact">KONTAKT</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" :class="isDarkMode ? 'text-light' : 'text-dark'" to="/contact">ÜBER</router-link>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -70,7 +73,12 @@ export default defineComponent({
 .navbar-brand {
   font-weight: bold;
   font-size: 1.8rem; 
-  letter-spacing: 0.05rem; 
+  letter-spacing: 0.5rem; 
+  margin-left: 20px;
+}
+
+.nav-item, nav-link:last-child {
+  margin-right: 20px;
 }
 
 .nav-link {
