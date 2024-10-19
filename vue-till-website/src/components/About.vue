@@ -11,8 +11,7 @@
         />
       </div>
       
-      <!-- Informationen über den Architekten -->
-      <div class="col-lg-6 col-md-12">
+    <div class="col-lg-6 col-md-12">
         <h2 class="text-uppercase">Über den Architekten</h2>
         <p>
           Till Pulst ist ein renommierter Architekt mit über 20 Jahren Erfahrung in der Gestaltung moderner und nachhaltiger Gebäude. 
