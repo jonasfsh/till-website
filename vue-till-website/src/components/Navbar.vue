@@ -10,13 +10,13 @@
           <router-link class="nav-link" :class="isDarkMode ? 'text-light' : 'text-dark'" to="/">HOME</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" :class="isDarkMode ? 'text-light' : 'text-dark'" to="/photography">PROJEKTE</router-link>
+          <router-link class="nav-link" :class="isDarkMode ? 'text-light' : 'text-dark'" to="/projects">PROJEKTE</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" :class="isDarkMode ? 'text-light' : 'text-dark'" to="/contact">KONTAKT</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" :class="isDarkMode ? 'text-light' : 'text-dark'" to="/contact">ÜBER</router-link>
+          <router-link class="nav-link" :class="isDarkMode ? 'text-light' : 'text-dark'" to="/about">ÜBER</router-link>
         </li>
       </ul>
       <ul class="navbar-nav">

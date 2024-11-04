@@ -2,7 +2,7 @@
   <div id="app">
     <div :class="{ 'dark-mode': isDarkMode }">
       <Navbar :isDarkMode="isDarkMode" @toggle-dark-mode="toggleDarkMode" />
-      <About/>
+      <router-link to="/about">About</router-link>
       <router-view />
     </div>
   </div>
@@ -11,13 +11,11 @@
 <script>
 import { ref } from 'vue';
 import Navbar from '@/components/Navbar.vue';
-import About from '@/components/About.vue';
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    About
   },
   setup() {
     const isDarkMode = ref(false);
