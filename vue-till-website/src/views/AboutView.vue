@@ -1,3 +1,9 @@
+<script setup>
+
+  
+
+</script>
+
 <template>
   <div class="container about-page">
     <div class="row align-items-center">
@@ -27,11 +33,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'About',
-};
-</script>
 
 <style scoped>
 .about-page {
